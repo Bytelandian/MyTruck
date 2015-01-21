@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>My route , My Truck</title>
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/forms.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" href="js/javas.js"></script>
+	<script type="text/javascript" src="js/jquery-latest.js"></script> 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/popupplugin.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script type="text/javascript">
+	</script>
+</head>
+
+<body>
+<div id="content">
+	<div id="top" style="height:150px;">
+		<div style="width:500px;float:left;">
+		<img src="images/Mytruck.png" width="400" height="150">
+		</div>
+		<div>
+		<p style="color:#33CCFF;font-size:30px;padding-top:50px;padding-left:920px;">1st Time? Look at :
+		<br><input type="button" onclick="poping()" class="awesome" value="Instructions" /></p>
+		<div id="pop">
+			<div style="float:left;">
+				<img src="images/q.png" width="400" height="500">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img src="images/rf.png" width="400" height="500">
+			
+			</div>
+			<div>
+				<p style="color:#62FF00;font-size:30px;">STEP 1 :
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				STEP 2 :
+				</p>	
+				<br><br>
+				<p style="color:#62FF00;font-size:20px;">1) You can directly click on the Query button at then
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				1) If you dont find a suitable truck, register 
+				<br>search the city you want as your initial or final place
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				here with desired locations and time you can 
+				
+				<br> or you can fill in the initial place or final place or both.
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				wait for the Transportation. 
+				<br><br>2) If you are not sure whether your Destination lies 
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				2) If any Truck Driver with your desired
+				<br>within the Truck's route, click on the MAP VIEW
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				locations comes up, you will be notified
+				<br> Button and search for your city.
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				through mail.
+				<br><br>3) If you dont find any suitable Driver for your
+				<br> transportation, follow STEP 2.</p>	
+				
+			</div>
+		
+
+		<br>
+		
+				
+		</div>
+		
+		
+		</div> 
+	</div>
+	<div style="padding-top:30px;padding-left:120px;padding-bottom:100px;">
+		<div style="float:left;">
+			<p style="color:#33CCFF;font-size:30px;">Registration Form</p><br><br>
+			<form id="form1" action="http://localhost/CSL458/clientregister.php"method="post">
+			<label for="name">First Name </label>
+			<input name="name" placeholder="Name" />
+			<label for="email">Email address </label>
+			<input type="email" name="email" placeholder="anything@example.com" required />
+			<label for="initial">Pick Up City</label>
+			<input name="initial" type="text" placeholder="City" required />
+			<label for="final">Delivery City</label>
+			<input name="final" type="text" placeholder="City" required />	
+			<label for="time">Waiting Time(hrs)</label>
+			<input name="time" type="text" placeholder="Time You Can Wait" required />	
+			<p class="small">We are professionals and your Personal information will not be shared with any third-party.</p>
+			<input type="submit" class="awesome" value="Register" />
+			</form>
+		</div>
+		<div>
+			<p style="color:#33CCFF;font-size:30px;padding-left:585px;">Query Form</p><br><br>
+			<form id="form2" action="index3.php" method="post">
+			<label for="initial">Pick Up City</label>
+			<input name="initial" type="text" placeholder="City" />
+			<label for="destination">Delivery City</label>
+			<input name="destination" type="text" placeholder="City" />		
+			<input type="submit" class="awesome" value="Query" />
+			</form>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		</div>
+	</div>
+	<div style="height:160px;padding-top:5px;">
+		<div>
+		<p style="color:#ffffff; font-size:30px; text-align:center;padding-top:2px; height:40px;">Contact Us</p>
+		</div>
+		<div>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<img class="circular" src="images/aniket.jpg" width="50" height="60">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<img class="circular" src="images/savya.jpg" width="50" height="60">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<img class="circular" src="images/mohit.jpg" width="50" height="60">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<img class="circular" src="images/jj.jpg" width="50" height="60"></img>
+			<p style="color:#ffffff; font-size:15px; padding-top:10px;padding-left:125px;">
+			Aniket Sachdeva
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Savyasachi Thakur
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Mohit Garg
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Jeevanjot Singh</p>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<button class="circular" href="#" class="home_btn" onclick="location.reload();location.href='https://www.facebook.com/iamcr07'" style="Background-image:url('images/fb.png');background-repeat: no-repeat;background-size:cover;width:20px;height:20px;"></button>&nbsp;&nbsp;&nbsp;
+			<button class="circular" href="#" class="home_btn" onclick="location.reload();location.href='https://plus.google.com/u/1/103840709007312129332/posts'" style="Background-image:url('images/g+.jpg');background-repeat: no-repeat;background-size:cover;width:20px;height:20px;"></button>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<button class="circular" href="#" class="home_btn" onclick="location.reload();location.href='https://www.facebook.com/savyasachi.sa?fref=ts'" style="Background-image:url('images/fb.png');background-repeat: no-repeat;background-size:cover;width:20px;height:20px;"></button>&nbsp;&nbsp;
+			<button class="circular" href="#" class="home_btn" onclick="location.reload();location.href='https://plus.google.com/u/1/+SavyasachiThakur/posts'" style="Background-image:url('images/g+.jpg');background-repeat: no-repeat;background-size:cover;width:20px;height:20px;"></button>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<button class="circular" href="#" class="home_btn" onclick="location.reload();location.href='https://www.facebook.com/profile.php?id=1807782298&fref=ts'" style="Background-image:url('images/fb.png');background-repeat: no-repeat;background-size:cover;width:20px;height:20px;"></button>&nbsp;&nbsp;
+			<button class="circular" href="#" class="home_btn" onclick="location.reload();location.href='https://plus.google.com/u/1/100091218532706803607/posts'" style="Background-image:url('images/g+.jpg');background-repeat: no-repeat;background-size:cover;width:20px;height:20px;"></button>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<button class="circular" href="#" class="home_btn" onclick="location.reload();location.href='https://www.facebook.com/jeevan.khalsa?fref=ts'" style="Background-image:url('images/fb.png');background-repeat: no-repeat;background-size:cover;width:20px;height:20px;"></button>&nbsp;&nbsp;
+			<button class="circular" href="#" class="home_btn" onclick="location.reload();location.href='https://plus.google.com/u/1/103587510462950031257/posts'" style="Background-image:url('images/g+.jpg');background-repeat: no-repeat;background-size:cover;width:20px;height:20px;"></button>
+			<br/>
+		</div>
+		
+	</div>
+</div>
+
+	<script>
+		$(document).ready(function(){
+		$("#pop").hide();
+	});	
+		
+	function poping(){
+	$("#pop").bPopup({
+		modalClose: false,
+            opacity: 0.95,
+            //'fixed' or 'absolute'
+		});
+	}
+	</script>		
+</body>
+</html>

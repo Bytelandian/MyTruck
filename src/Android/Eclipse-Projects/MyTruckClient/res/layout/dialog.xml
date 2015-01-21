@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+  
+ 
+<TextView
+    android:id="@+id/T1"
+    android:text="Enter Your Email Address"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:singleLine="true"
+    android:textColor="#33CCFF" >           
+    
+</TextView>
+    
+<EditText
+    android:id="@+id/ET1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textEmailAddress"
+    android:singleLine="true">
+</EditText>
+<TextView
+    android:id="@+id/T2"
+    android:textColor="#33CCFF"            
+    android:text="Number of Hours you are willing to Wait"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:singleLine="true">
+    </TextView>
+    
+<EditText
+    android:id="@+id/ET2"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:singleLine="true"
+    android:inputType="number"
+    android:maxLength="10"
+    >
+</EditText>
+ 	    <Button
+	        android:id="@+id/dialogButtonOK"
+	        android:padding="20dp"	        
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/border"
+        	android:textColor="#33CCFF"        
+	        android:layout_gravity="center"
+	        android:text="Submit" >
+	        </Button>
+	
+</LinearLayout>

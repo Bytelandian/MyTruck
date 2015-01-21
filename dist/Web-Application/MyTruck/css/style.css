@@ -1,0 +1,120 @@
+/*
+Modern table design - template
+Download more PSD stuff from www.psdgraphics.com
+*/
+
+
+
+
+#psdgraphics-com-table {
+	margin:0;
+	padding: 4px;
+	width: 700px;
+	font: 11px Arial, Helvetica, sans-serif;
+	color:#747474;
+	background-color:#0c2a62;
+}
+
+
+#psdg-header {
+	margin:0;
+	padding: 14px 0 0 24px;
+	width: 700px;
+	height: 55px;
+	color:#FFF;
+	font-size:13px;
+	background: #0c2c65 url(images/head-bcg.jpg) no-repeat right top;	
+}
+
+.psdg-bold {
+	font: bold 22px Arial, Helvetica, sans-serif;
+	
+}
+
+#psdg-top {
+	margin:0;
+	padding: 0;
+	width: 700px;
+	height: 46px;
+	border-top: 2px solid #FFF;
+	background: #eff4ff url(images/top-light-blue.png) repeat-x left top;	
+}
+
+.psdg-top-cell {
+	float:left;
+	padding: 15px 0 0 0;
+	text-align:center;
+	width:110px;
+	height: 31px;
+	border-right: 1px solid #ced9ec;
+	color:#1f3d71;
+	font: 13px Arial, Helvetica, sans-serif;
+}
+
+#psdg-middle {
+	margin:0;
+	padding: 0;
+	width: 700px;
+	background: #f6f6f6 url(images/center-bcg.png) repeat-y right top;	
+}
+
+.psdg-left {
+	float:left;
+	margin:0;
+	padding: 10px 0 0 24px;
+	width: 110px;
+	text-align: left;
+	height: 25px;
+	border-right: 1px solid #ced9ec;
+	border-bottom: 1px solid #b3c1db;
+	color:#1f3d71;
+	font: 13px Arial, Helvetica, sans-serif;
+	background: #e4ebf8 url(images/center-blue.png) repeat-y left top;
+}
+
+
+
+.psdg-right {
+	float:left;
+	margin:0;
+	padding: 11px 0 0 0;
+	width: 110px;
+	text-align:center;
+	height: 24px;
+	border-right: 1px solid #ced9ec;
+	border-bottom: 1px solid #b3c1db;
+}
+
+#psdg-bottom {
+	clear:both;
+	margin:0;
+	padding: 0;
+	width: 700px;
+	height: 48px;
+	border-top: 2px solid #FFF;
+	background: #e4e3e3 url(images/bottom-line.png) repeat-x left top;	
+}
+
+
+.psdg-bottom-cell {
+	float:left;
+	padding: 15px 0 0 0;
+	text-align:center;
+	width:110px;
+	height: 33px;
+	border-right: 1px solid #ced9ec;
+	color:#070707;
+	font: 13px Arial, Helvetica, sans-serif;
+}
+
+
+
+#psdg-footer {
+	font-size: 10px;
+	color:#8a8a8a;
+	margin:0;
+	padding: 8px 0 8px 12px;
+	width: 566px;
+	background: #f6f6f6 url(images/center-bcg.png) repeat-y right top;	
+}
+

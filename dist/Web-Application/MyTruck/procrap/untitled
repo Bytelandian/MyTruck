@@ -1,0 +1,80 @@
+
+<html>
+	
+
+<script type="text/javascript" src="jquery-latest.js"></script> 
+<link rel="stylesheet" href="styler.css" type="text/css" id="" media="print, projection, screen" />
+
+<script type="text/javascript" src="jquery.tablesorter.js"></script> 
+<body style="background-image: url('blue.jpg'); background-repeat: repeat;">
+<table id="myTable" class="tablesorter"> 
+<thead> 
+<tr> 
+    <th>Name</th> 
+    <th>Contact</th> 
+    <th>Pick Up City</th> 
+    <th>Deliver City</th> 
+    <th>Waiting Time</th> 
+    <th>Search</th>
+</tr> 
+</thead> 
+<tbody> 
+<?php include("query.php"); 
+$cnt=0;
+			
+		while ($cnt<$count)
+		{
+			echo('<tr>'); 
+			echo('<td>'.$arr[$cnt][0].'</td>'); 
+			echo('<td>'.$arr[$cnt][1].'</td>'); 
+			echo('<td>'.$arr[$cnt][2].'</td>'); 
+			echo('<td>'.$arr[$cnt][3].'</td>'); 
+			echo('<td>'.$arr[$cnt][4].'</td>'); 
+			echo('<td><button onclick="myFunction('.$arr[$cnt][2].','.$arr[$cnt][3].')">Click me</button></td>');
+			echo('</tr>'); 
+$cnt+=1;}
+?>
+
+</tbody> 
+</table> 
+<form method="get" action="searcher.php">
+<table bgcolor="#FFFFFF" cellpadding="0px" cellspacing="0px">
+<tr>
+<td style="border-style:none;">
+<div style="background: url('roundbox.gif') no-repeat left top; padding: 0px; height: 22px;">
+<input type="text" id="query" name="query" style="border: none; background-color: transparent; width: 106px; padding-left: 5px; padding-right: 5px;"> 
+</div>
+</td>
+
+<input type='hidden' id='co' name='co' value='<?php echo $count;?>'>
+<?php
+$it=0;
+for($it=0;$it<$count;$it++)
+{
+  echo '<input type="hidden" name="result['.$it.'][0]" value="'. $arr[$it][0]. '">';
+  echo '<input type="hidden" name="result['.$it.'][1]" value="'. $arr[$it][1]. '">';
+  echo '<input type="hidden" name="result['.$it.'][2]" value="'. $arr[$it][2]. '">';
+  echo '<input type="hidden" name="result['.$it.'][3]" value="'. $arr[$it][3]. '">';
+  echo '<input type="hidden" name="result['.$it.'][4]" value="'. $arr[$it][4]. '">';
+}?>
+<td style="border-style:none;"> 
+<input type="submit" value="" style="border-style: none; background: url('searchbutton1.gif') no-repeat; width: 24px; height: 22px;">
+</td>
+</tr>
+</table>
+</form>
+<script>
+function myFunction(var p1, var p2) {
+            var myWindow = window.open("pop.html","","width=200,height=100");
+}
+</script>
+<script>
+	$(document).ready(function() 
+    { 
+        $("#myTable").tablesorter(); 
+    } 
+); 
+</script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+</body>
+</html>

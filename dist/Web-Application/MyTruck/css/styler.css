@@ -1,0 +1,181 @@
+/* tables */
+.bdy{
+	background: #5BDEFC;
+}
+table a:link {
+	color: #666;
+	font-weight: bold;
+	text-decoration:none;
+}
+table a:visited {
+	color: #999999;
+	font-weight:bold;
+	text-decoration:none;
+}
+table a:active,
+table a:hover {
+	color: #ffffff;
+	text-decoration:underline;
+}
+#popup { 
+    background: #5BDEFC;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#5BDEFC));
+	background: -moz-linear-gradient(top,  #ffffff,  #5BDEFC); 
+    border-radius:15px;
+    display:none; 
+    min-width:400px;
+    min-height: 180px;
+}
+.b-close{
+    cursor:pointer;
+    color: #5BDEFC;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+table {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#666;
+	font-size:12px;
+	text-shadow: 1px 1px 0px #fff;
+	background:#eaebec;
+	margin:20px;
+	border:#ccc 1px solid;
+
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+
+	-moz-box-shadow: 0 1px 2px #d1d1d1;
+	-webkit-box-shadow: 0 1px 2px #d1d1d1;
+	box-shadow: 0 1px 2px #d1d1d1;
+}
+th {
+	padding:21px 25px 22px 25px;
+	border-top:1px solid #fafafa;
+	border-bottom:1px solid #e0e0e0;
+
+	background: #ededed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+	background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+}
+table th:first-child {
+	text-align: center;
+	padding-left:20px;
+}
+table tr:first-child th:first-child {
+	-moz-border-radius-topleft:3px;
+	-webkit-border-top-left-radius:3px;
+	border-top-left-radius:3px;
+}
+table tr:first-child th:last-child {
+	-moz-border-radius-topright:3px;
+	-webkit-border-top-right-radius:3px;
+	border-top-right-radius:3px;
+}
+table tr {
+	text-align: center;
+	padding-left:20px;
+}
+table td:first-child {
+	text-align: center;
+	padding-left:20px;
+	border-left: 0;
+}
+td {
+	padding:18px;
+	border-top: 1px solid #ffffff;
+	border-bottom:1px solid #e0e0e0;
+	border-left: 1px solid #e0e0e0;
+
+	background: #99FFFF;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#99FFFF));
+	background: -moz-linear-gradient(top,  #ffffff,  #99FFFF);
+}
+table tr.even td {
+	background: #f6f6f6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+	background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+}
+table tr:last-child td {
+	border-bottom:0;
+}
+table tr:last-child td:first-child {
+	-moz-border-radius-bottomleft:3px;
+	-webkit-border-bottom-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+table tr:last-child td:last-child {
+	-moz-border-radius-bottomright:3px;
+	-webkit-border-bottom-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+table tr:hover td {
+	background: #FFFFFF;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f0f0f0));
+	background: -moz-linear-gradient(top,  #ffffff,  #f0f0f0);	
+}
+table {
+	font: 11px/24px Verdana, Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 320px;
+	}
+
+
+
+tr.yellow td {
+	border-top: 1px solid #FB7A31;
+	border-bottom: 1px solid #FB7A31;
+	background: #FFC;
+	}
+
+
+
+td.width {
+	width: 190px;
+	}
+
+td.adjacent {
+	border-left: 1px solid #CCC;
+	text-align: center;
+	}
+table.tablesorter {
+	font-family:arial;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	width: 100%;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #e6EEEE;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+}
+table.tablesorter thead tr .header {
+	background-image: url(images/asc.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+	
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+	
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(images/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}

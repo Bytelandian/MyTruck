@@ -1,0 +1,158 @@
+<html>
+	<script type="text/javascript" src="js/jquery-latest.js"></script> 
+	<link rel="stylesheet" href="css/styler.css" type="text/css" id="" media="print, projection, screen" />
+	<script type="text/javascript" src="js/jquery.tablesorter.js"></script> 
+	<script type="text/javascript" src="js/jquery.tablesorter.pager.js"></script> 
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script src="js/popupplugin.js"></script>
+	<LINK href="css/stylerz.css" rel="stylesheet" type="text/css">
+<body class="bdy" >
+	<div>
+		<div style="width:1000px;float:left;">
+		<img src="images/Mytruck.png" width="400" height="150">
+		</div>
+		<form method="get" action="searcher.php" style="padding-top:60px;">
+		<input type="text" id="query" name="query" style="border: none; height:25px;"> <br><br>
+		<?php include("query.php"); ?>
+		<input type='hidden' id='co' name='co' value='<?php echo $count;?>'>
+		<?php
+		$it=0;
+		for($it=0;$it<$count;$it++)
+		{
+				echo '<input type="hidden" name="result['.$it.'][0]" value="'. $arr[$it][0]. '">';
+				echo '<input type="hidden" name="result['.$it.'][1]" value="'. $arr[$it][1]. '">';
+				echo '<input type="hidden" name="result['.$it.'][2]" value="'. $arr[$it][2]. '">';
+				echo '<input type="hidden" name="result['.$it.'][3]" value="'. $arr[$it][3]. '">';
+				echo '<input type="hidden" name="result['.$it.'][4]" value="'. $arr[$it][4]. '">';
+		}
+		?>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="submit" value="" style="border-style: none; background: url('images/search.gif'); width:70px; height:26px;">
+		</form>
+	</div>
+	<br>
+	<table id="myTable" class="tablesorter"> 
+	<thead> 
+	<tr> 
+		<th>Name</th> 
+		<th>Contact</th> 
+		<th>Pick Up City</th> 
+		<th>Deliver City</th> 
+		<th>Time Left in Departure </th> 
+		<th>Search</th>
+	</tr> 
+	</thead> 
+	<tbody> 
+	<?php
+	$cnt=0;
+	while ($cnt<$count)
+	{
+			echo('<tr>'); 
+			echo('<td>'.$arr[$cnt][0].'</td>'); 
+			echo('<td>'.$arr[$cnt][1].'</td>'); 
+			echo('<td id="ac'.$cnt.'">'.$arr[$cnt][2].'</td>'); 
+			echo('<td id="dc'.$cnt.'">'.$arr[$cnt][3].'</td>'); 
+			echo('<td>'.$arr[$cnt][4].'</td>'); 
+			echo('<td><button type="button" id="'.$cnt.'" class="button" onClick="checkRoute(this.id)" style="height:27px;width:69px;background: url(images/mapview.jpg);"></button></td>');
+			echo('</tr>'); 
+			$cnt+=1;
+	}
+	?>
+
+	</tbody> 
+	</table> 
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+	<div id="popup" >
+		<a class="b-close">X<a/>
+		<h4 style="color:#33CCFF">Check Whether Your City Lies On The Route Or Not </h4>
+		<input type="text" id="i" style="height:28px;width:250px"><br><br>
+		<button type="button" onclick="onQuery()" style="height:28px;width:74px;background: url('images/search.gif');"></button><br><br>
+		<div id="googleMap" style="width:500px;height:380px;paddingtop:10px;"></div>
+		<p id="p1"></p>
+	</div> 	
+
+</body>
+
+	<script>
+	var map;
+	var startCity;
+	var endCity;
+	function onQuery(){
+		var marker;
+		var queryCity=document.getElementById("i").value;
+		var geocoder =  new google.maps.Geocoder();
+		geocoder.geocode( { 'address': queryCity}, function(results, status) {
+			if (status == google.maps.GeocoderStatus.OK) {
+			var lat,lng;
+			lat=results[0].geometry.location.lat();
+			lng=results[0].geometry.location.lng();
+			createMarker(lat,lng);
+			}
+			});
+			
+			function createMarker( lat, lng){
+				var query=new google.maps.LatLng(lat,lng);
+				if(!marker) marker=new google.maps.Marker({map:map,position:query});
+				else marker.setPosition(query);
+			}
+
+	}
+	function drawMap(lat1,lng1,lat2,lng2){	
+		var start =new google.maps.LatLng(lat1,lng1);
+		var end =new google.maps.LatLng(lat2,lng2);
+		var directionDisplay;
+		var directionsService = new google.maps.DirectionsService();
+		directionsDisplay = new google.maps.DirectionsRenderer();
+		var mapOptions = {
+			zoom:13,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			center:start
+		}
+		map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
+		directionsDisplay.setMap(map);
+		var request = {
+			origin:start,
+			destination:end,
+			travelMode: google.maps.DirectionsTravelMode.DRIVING
+		};
+		directionsService.route(request, function(response, status) {
+			if (status == google.maps.DirectionsStatus.OK) {
+				directionsDisplay.setDirections(response);
+			}
+		});
+	
+	}
+	
+
+	$(document).ready(function(){
+		$("#myTable").tablesorter(); 
+		$("#popup").hide();
+	});
+	function checkRoute(id){
+		startCity=document.getElementById("ac"+id).innerHTML;
+		endCity=document.getElementById("dc"+id).innerHTML;
+		var lat1,lng1,lat2,lng2;
+		var geocoder =  new google.maps.Geocoder();
+		geocoder.geocode( { 'address': startCity}, function(results, status) {
+			if (status == google.maps.GeocoderStatus.OK) {
+			lat1=results[0].geometry.location.lat();
+			lng1=results[0].geometry.location.lng();
+			}
+		});
+		var geocoder2 =  new google.maps.Geocoder();
+		geocoder2.geocode( { 'address': endCity}, function(results, status) {
+			if (status == google.maps.GeocoderStatus.OK) {
+			lat2=results[0].geometry.location.lat();
+			lng2=results[0].geometry.location.lng();
+			}
+		});
+
+		setTimeout(function(){
+			$("#popup").bPopup();
+			drawMap(lat1,lng1,lat2,lng2);
+			}, 1000);
+		}
+
+</script>
+
+</html>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33CCFF"
+    android:orientation="vertical"
+     >
+
+    <TextView
+        android:layout_marginTop="20dp"		
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Destination"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+       
+        >
+        
+        
+    </TextView>
+
+    <EditText  
+        android:layout_marginLeft="30dp"		
+        android:layout_marginRight="30dp"		
+        android:background="@drawable/border"    
+        android:id="@+id/EditText01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true" 
+        android:hint="Destination"
+        android:padding="10dp">
+        
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:layout_marginTop="20dp"	        	
+        android:layout_marginBottom="10dp"		
+        android:id="@+id/tv2"
+        android:layout_gravity="center"        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textSize="20sp"        
+        android:text="Time Left In Departure"
+        android:textColor="#FFFFFF"
+         >
+    </TextView>
+
+    <EditText
+        android:id="@+id/EditText02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Time(in Hours)"
+        android:inputType="number"        
+        android:layout_marginLeft="30dp"		
+        android:layout_marginRight="30dp"		
+        android:background="@drawable/border"    
+        android:padding="10dp"
+        >
+    </EditText>
+
+
+    <Button
+        android:layout_marginLeft="30dp"		
+        android:layout_marginRight="30dp"		
+        android:layout_marginTop="30dp"
+        android:padding="20dp"
+        android:id="@+id/Button01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/border"
+        android:textColor="#33CCFF"        
+        android:text="Submit" >
+        
+    </Button>
+    <Button
+        android:layout_marginLeft="30dp"		
+        android:layout_marginRight="30dp"		
+        android:layout_marginTop="30dp"
+        android:padding="20dp"
+        android:id="@+id/Button02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/border"
+        android:textColor="#33CCFF"        
+        android:text="Got The Customer" >
+        
+    </Button>
+    
+    
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+</LinearLayout>

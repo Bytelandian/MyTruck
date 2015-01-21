@@ -1,0 +1,30 @@
+body { font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #FFF; background-image: url(images/blue.jpg); background-repeat: repeat; }
+.clear { clear: both; }
+#header { background:url(images/colour-bars.png) repeat-x scroll -50% 0; height: 1px; width: 100%; }
+#content { background: #5BDEFC;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#5BDEFC));
+	background: -moz-linear-gradient(top,  #ffffff,  #5BDEFC); }
+form { width: 400px; background-color: #fcfcfc;background-color: rgba(0,0,0,0.5);  padding: 15px 25px; margin: 0 auto; color: #fff;-moz-border-radius:  20px; -webkit-border-radius:  20px; border-radius: 20px; overflow: hidden; }
+label { clear:  both; display: block; text-shadow: 0px -1px 0px #000; text-shadow: 0 -1px rgba(0,0,0,0.5);  font-family: "kaffeesatz-1","kaffeesatz-2",sans-serif; }
+input { margin-bottom: 25px; }
+sup { color: #f00; }
+input { font-size:18px; border: 2px solid #999; padding: 6px 8px; background-color: #fff; -webkit-box-shadow: inset 0px 2px 2px rgba(0,0,0,0.2); -moz-box-shadow: inset 0px 2px 2px rgba(0,0,0,0.2); box-shadow: inset 0px 2px 2px rgba(0,0,0,0.2); color: #696969; width: 375px;  }
+input:focus { border: 2px solid #6c6; -webkit-box-shadow:none; -moz-box-shadow: none; box-shadow: none; }
+input[type=date],
+input[type=number],
+input[type=submit] { -moz-border-radius:  0px; -webkit-border-radius:  0px; border-radius:  0px; width: auto; }
+input[type=submit] { margin-top:10px;}
+input:invalid {  border: 2px blue solid; }
+input.awesome{ background: #fc9200 url(images/alert-overlay.png) repeat-x; display: inline-block; padding: 5px 10px 6px; color: #fff; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; float:right; font-size: 28px; font-family: "kaffeesatz-1","kaffeesatz-2",sans-serif; }
+input.awesome:hover	{ background-color: #ffb515; }
+.small { font-size:10px; margin: 15px 0; color: #fff; text-shadow: 0px -1px 0px #000; text-shadow: 0 -1px rgba(0,0,0,0.5); }
+#twitterFollow { margin-top: 5px; }
+#footerLinks { width: 450px; margin: 10px auto 0 auto; font-size: 16px;	font-family: "kaffeesatz-1","kaffeesatz-2",sans-serif; text-align: center; }
+#footerLinks a:link, #footerLinks a:visited { color: #fff; text-decoration: none; }
+#footerLinks a:hover, #footerLinks a:active { text-decoration: underline; }
+.circular {
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(http://link-to-your/image.jpg) no-repeat;
+	}
